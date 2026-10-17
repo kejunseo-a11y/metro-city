@@ -1,0 +1,253 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #112330;
+  color: #f4f3e9;
+  font:
+    14px "Segoe UI",
+    sans-serif;
+}
+canvas {
+  display: block;
+}
+body > canvas {
+  position: fixed;
+  inset: 0;
+}
+#app {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  text-shadow: 0 1px 3px #0008;
+}
+#brand {
+  position: absolute;
+  left: 32px;
+  top: 25px;
+}
+#brand b {
+  letter-spacing: 5px;
+  font-size: 22px;
+}
+#brand b span {
+  color: #74dac9;
+}
+small {
+  display: block;
+  color: #bbcccf;
+  font-size: 11px;
+  letter-spacing: 1px;
+  margin: 6px 0;
+}
+#account {
+  position: absolute;
+  right: 32px;
+  top: 24px;
+  text-align: right;
+}
+#account strong {
+  font-size: 27px;
+  letter-spacing: 1px;
+}
+.stars {
+  color: #eec279;
+  font-size: 27px;
+  letter-spacing: 5px;
+  margin-top: 10px;
+}
+.stars span {
+  color: #8398a1;
+}
+#objective {
+  position: absolute;
+  left: 32px;
+  top: 100px;
+  border-left: 3px solid #79d9c3;
+  padding: 3px 16px;
+  max-width: 470px;
+  background: linear-gradient(90deg, #102633cc, transparent);
+}
+h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 7px 0;
+}
+#objective span {
+  font-size: 12px;
+  color: #b7c9cd;
+}
+#mapWrap {
+  position: absolute;
+  left: 30px;
+  bottom: 55px;
+  width: 240px;
+  border: 1px solid #aac4bf55;
+  background: #162d38dd;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px #0003;
+}
+#mapWrap.big {
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  width: 650px;
+  transform: translate(-50%, -50%);
+}
+#health {
+  height: 27px;
+  position: relative;
+  padding: 5px 10px;
+  background: #203f43;
+  font-size: 11px;
+}
+#health i {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: #75d8ae;
+}
+#speed {
+  position: absolute;
+  right: 35px;
+  bottom: 65px;
+  text-align: right;
+}
+#speed strong {
+  font-size: 70px;
+  font-weight: 300;
+}
+#speed small {
+  display: inline;
+}
+#speed p {
+  font-size: 12px;
+  color: #bbcccf;
+}
+#hint {
+  position: absolute;
+  left: 50%;
+  bottom: 95px;
+  transform: translateX(-50%);
+  background: #102632dd;
+  border: 1px solid #88b5b066;
+  padding: 12px 20px;
+  border-radius: 4px;
+}
+#hint:empty {
+  display: none;
+}
+#notice {
+  position: absolute;
+  left: 50%;
+  top: 28px;
+  transform: translateX(-50%);
+  font-size: 13px;
+  color: #f0ce8d;
+}
+#controls {
+  position: absolute;
+  bottom: 17px;
+  left: 32px;
+  color: #c0cbd0;
+  font-size: 11px;
+}
+#overlay {
+  position: absolute;
+  inset: 0;
+  display: none;
+  place-items: center;
+  background: linear-gradient(105deg, #081b2eeb, #0e2837bb);
+  pointer-events: auto;
+  backdrop-filter: blur(6px);
+}
+section {
+  width: min(680px, 90vw);
+  padding: 45px;
+  border: 1px solid #8ab5bd44;
+  background: #142b38db;
+  border-radius: 8px;
+  box-shadow: 0 20px 100px #0005;
+}
+.eyebrow {
+  letter-spacing: 4px;
+  font-size: 11px;
+  color: #7dd8c2;
+}
+h1 {
+  font-size: 64px;
+  letter-spacing: -2px;
+  line-height: 1.1;
+  margin: 22px 0;
+}
+section p {
+  color: #bccdd0;
+  line-height: 1.9;
+}
+section ul {
+  line-height: 1.9;
+  color: #bfced1;
+  padding-left: 20px;
+}
+#buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+button {
+  border: 1px solid #80c6ba66;
+  background: #78d4bb;
+  color: #102c35;
+  border-radius: 3px;
+  padding: 13px 23px;
+  cursor: pointer;
+  font-weight: 700;
+}
+button:hover {
+  background: #b1f4d8;
+}
+button + button {
+  background: #244351;
+  color: #dcebe8;
+}
+label {
+  font-size: 12px;
+  line-height: 2;
+  color: #bfd3d5;
+}
+select {
+  background: #203d49;
+  color: white;
+  border: 1px solid #688;
+  padding: 5px;
+}
+.settings-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 24px;
+  margin: 20px 0;
+  padding: 20px;
+  background: #09232f77;
+  border: 1px solid #6e9b9d33;
+  border-radius: 5px;
+}
+.settings-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.settings-grid label:last-child {
+  flex-direction: row;
+  grid-column: 1 / -1;
+}
+.settings-grid select {
+  padding: 10px;
+  border-color: #6e9b9d66;
+  border-radius: 3px;
+}
